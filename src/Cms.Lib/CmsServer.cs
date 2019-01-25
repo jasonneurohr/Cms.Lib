@@ -11,6 +11,7 @@ namespace Cms.Lib
         public string ApiPass { private get; set; }
         public string CmsAddress { private get; set; }
         public IMediaLoad MediaLoad { get; private set; }
+        public ISystemStatus SystemStatus { get; private set; }
 
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly HttpClient _httpClient;
@@ -28,6 +29,7 @@ namespace Cms.Lib
             _httpClient = _httpClientFactory.NewClient(ApiUser, ApiPass);
 
             MediaLoad = new MediaLoad(_httpClient, _apiUri);
+            SystemStatus = new SystemStatus(_httpClient, _apiUri);
         }
     }
 }

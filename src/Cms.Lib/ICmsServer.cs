@@ -7,5 +7,6 @@ namespace Cms.Lib
     public interface ICmsServer
     {
         IMediaLoad MediaLoad { get; }
+        ISystemStatus SystemStatus { get; }
     }
 }
