@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
@@ -17,9 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Cms.Lib">
-      <HintPath>..\Cms.Lib\bin\Debug\netstandard2.0\Cms.Lib.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\Cms.Lib\Cms.Lib.csproj" />
   </ItemGroup>
 
 </Project>
